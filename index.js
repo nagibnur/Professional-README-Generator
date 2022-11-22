@@ -31,7 +31,17 @@ async function collectAnswersAndGeneratorREADME() {
 }
 async function generatorReadme(answers) {
   const READMEDocument = await fs.promises.readFile("./README.md", "utf8");
-  const READMEfile = READMEDocument.replace("title", answers.title);
+  const READMEfile = READMEDocument
+  .replace("1", answers.title)
+  .replace("2", answers.Description)
+  .replace("3", answers.Contents)
+  .replace("4", answers.Installation)
+  .replace("5", answers.Usage)
+  .replace("6", answers.License)
+  .replace("7", answers.Contributing)
+  .replace("8", answers.Tests)
+  .replace("9", answers.Questions);
+
   console.log(READMEfile);
 }
 

@@ -41,6 +41,7 @@ async function generatorReadme(answers) {
   .replace("7", answers.Contributing)
   .replace("8", answers.Tests)
   .replace("9", answers.Questions);
+  await fs.promises.writeFile('./index.md', READMEfile)
 
   console.log(READMEfile);
 }

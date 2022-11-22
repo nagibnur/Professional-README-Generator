@@ -18,14 +18,16 @@ const inquirerQuestions = Questions.map(it => {
         Message: it,
     }
 })
-console.log(inquirerQuestions);
 
 async function askQuestions() {
-    inquirer.prompt(inquirerQuestions)
+  return await  inquirer.prompt(inquirerQuestions)
 }
 
-askQuestions()
-
+async function collectAnswersAndGeneratorREADME() {
+    const responses = await askQuestions()
+    console.log(responses);
+}
+collectAnswersAndGeneratorREADME()
 
 // the title of my project 
 // and sections entitled Description,

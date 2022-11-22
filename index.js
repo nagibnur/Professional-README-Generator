@@ -1,3 +1,4 @@
+const inquirer = require('inquirer')
 const Questions = [
     'title',
     'Description',
@@ -18,6 +19,13 @@ const inquirerQuestions = Questions.map(it => {
     }
 })
 console.log(inquirerQuestions);
+
+async function askQuestions() {
+    inquirer.prompt(inquirerQuestions)
+}
+
+askQuestions()
+
 
 // the title of my project 
 // and sections entitled Description,

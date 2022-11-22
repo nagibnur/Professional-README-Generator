@@ -1,4 +1,6 @@
 const inquirer = require('inquirer')
+const fs = require('fs')
+
 const Questions = [
     'title',
     'Description',
@@ -28,7 +30,8 @@ async function collectAnswersAndGeneratorREADME() {
     console.log(responses);
 }
 async function generatorReadme(answers) {
-    console.log(answers);
+   const READMEDocument = await fs.promises.readFile('./README.md', 'utf8')
+   console.log(READMEDocument);
 }
 
 const dummyAnswers = {

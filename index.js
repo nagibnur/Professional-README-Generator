@@ -27,7 +27,25 @@ async function collectAnswersAndGeneratorREADME() {
     const responses = await askQuestions()
     console.log(responses);
 }
-collectAnswersAndGeneratorREADME()
+async function generatorReadme(answers) {
+    console.log(answers);
+}
+
+const dummyAnswers = {
+    title: 'nagib',
+    Description: 'readme',
+    Contents: 'homework',
+    Installation: 'now',
+    Usage: 'dont know',
+    License: 'not yet',
+    Contributing: 'my self',
+    Tests: 'go',
+    Questions: 'done'
+  }
+  
+
+generatorReadme(dummyAnswers)
+// collectAnswersAndGeneratorREADME()
 
 // the title of my project 
 // and sections entitled Description,

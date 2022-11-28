@@ -1,18 +1,24 @@
- ## title: 
- 1
+ ## Title: 
+ $Title
  ## Description: 
- 2
+ $Description
  ## Contents: 
- 3
+ $Contents
+ * [Installation](#installation)
+ * [Usage](#usage)
+ * [License](#license)
+ * [Contributing](#contributing)
+ * [Tests](#tests)
+ * [Questions](#questions)
  ## Installation: 
- 4
+ $Installation
  ## Usage: 
- 5
+ $Usage
  ## License: 
- 6
+ $License
  ## Contributing: 
- 7
+ $Contributing
  ## Tests: 
- 8
+ $Tests
  ## Questions: 
- 9
+ $Questions

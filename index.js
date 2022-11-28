@@ -27,27 +27,27 @@ async function askQuestions() {
 
 async function collectAnswersAndGeneratorREADME() {
   const responses = await askQuestions();
-  console.log(responses);
+  //generatorReadme(responses)
 }
 async function generatorReadme(answers) {
   const READMEDocument = await fs.promises.readFile("./README.md", "utf8");
   const READMEfile = READMEDocument
-  .replace("1", answers.title)
-  .replace("2", answers.Description)
-  .replace("3", answers.Contents)
-  .replace("4", answers.Installation)
-  .replace("5", answers.Usage)
-  .replace("6", answers.License)
-  .replace("7", answers.Contributing)
-  .replace("8", answers.Tests)
-  .replace("9", answers.Questions);
+  .replace("$Title", answers.Title)
+  .replace("$Description", answers.Description)
+  .replace("$Contents", answers.Contents)
+  .replace("$Installation", answers.Installation)
+  .replace("$Usage", answers.Usage)
+  .replace("$License", answers.License)
+  .replace("$Contributing", answers.Contributing)
+  .replace("$Tests", answers.Tests)
+  .replace("$Questions", answers.Questions);
   await fs.promises.writeFile('./index.md', READMEfile)
 
   console.log(READMEfile);
 }
 
 const dummyAnswers = {
-  title: "nagib",
+  Title: "nagib",
   Description: "readme",
   Contents: "homework",
   Installation: "now",
@@ -59,14 +59,6 @@ const dummyAnswers = {
 };
 
 generatorReadme(dummyAnswers);
-// collectAnswersAndGeneratorREADME()
 
-// the title of my project
-// and sections entitled Description,
-// Table of Contents,
-// Installation,
-// Usage,
-// License,
-// Contributing,
-// Tests,
-// and Questions
+//collectAnswersAndGeneratorREADME()
+
